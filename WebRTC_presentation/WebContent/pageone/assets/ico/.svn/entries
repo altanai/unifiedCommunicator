@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="144"
+   name=""
+   committed-date="2012-12-17T06:45:03.465174Z"
+   url="http://sipml5.googlecode.com/svn/trunk/release/assets/ico"
+   last-author="bossiel@yahoo.fr"
+   kind="dir"
+   uuid="63d8a0da-676c-2731-e3aa-b417aa27da68"
+   repos="http://sipml5.googlecode.com/svn"
+   revision="175"/>
+<entry
+   committed-rev="144"
+   name="apple-touch-icon-57-precomposed.png"
+   text-time="2013-03-19T06:51:46.625162Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="85c4ec1a84c43013bf75d0b51b8f96df"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:46.031412Z"/>
+<entry
+   committed-rev="144"
+   name="apple-touch-icon-114-precomposed.png"
+   text-time="2013-03-19T06:51:46.640787Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="e47d43fba984bac3939bfd108d28661f"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:46.375162Z"/>
+<entry
+   committed-rev="144"
+   name="apple-touch-icon-72-precomposed.png"
+   text-time="2013-03-19T06:51:46.703287Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="fc2efe64665631557ff138fa4fbf9e09"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:46.609537Z"/>
+</wc-entries>
