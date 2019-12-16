@@ -54,7 +54,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 <table align="center">
 <tr>
-	<td align="center" ><button id="HangUp" onclick="makeSipCall();endCall()">Location</button></td>
+<!-- 	<td align="center" ><button id="HangUp" onclick="makeSipCall();endCall()">Location</button></td> -->
+	<td> <input type="text" value=<%=request.getParameter("friendName")%> id="friendName" name="friendName"></td>
 	<td> <input type="text" value=<%=request.getParameter("friendlatitude")%> id="friendlatitude" name="friendlatitude"> </td>
 	<td> <input type="text" value=<%=request.getParameter("friendlongitude")%> id="friendlongitude" name="friendlongitude"> </td>
 	

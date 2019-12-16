@@ -16,6 +16,8 @@ String theme=ts.getTheme(session.getAttribute("themename").toString());%>
     <title>WebRTC client </title>
  <link rel="stylesheet" href="css/<%=theme %>" type="text/css" media="screen" />
 <!--     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" /> -->
+     <link rel="stylesheet" href="vaibhav.css" type="text/css" />
+    
     <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
     <link rel="stylesheet" href="css/jquery.fancybox-1.3.4.css" type="text/css" />
 
@@ -32,19 +34,19 @@ String theme=ts.getTheme(session.getAttribute("themename").toString());%>
     <script src="js/jquery.fancybox-1.3.4.pack.js"></script>
     <script src="js/init.js"></script>
 
-
 <script>
-var name=session.getAttribute("name");
-var privateIdentity="sip:<%=session.getAttribute("name")%>@tcs.com";
-var realm="tcs.com";
-
+<%
+	if(session.getAttribute("name")==null ){
+	    System.out.println(" -----------> session attribute not set redirecting top login.jsp");
+		response.sendRedirect("login.jsp");
+	}
+%>
 </script>
 
 <script>
-<%
-	if(session.getAttribute("name")==null)
-		response.sendRedirect("login.jsp");	
-%>
+var name=session.getAttribute("name");
+var privateIdentity=<%=session.getAttribute("privateIdentity")%>;
+var realm=<%=session.getAttribute("realm")%>;
 </script>
 
 <script type="text/javascript">
@@ -60,42 +62,26 @@ var realm="tcs.com";
 
 <body>
 
+
 <!-- header-wrap -->
 <div id="header-wrap">
-    <header>
-     
-		 
-		   
-<div><img src="images/tcs_logo.png"</div>
-
-        <nav>
-            <ul>
-            <li><a href="home.jsp#main">Home</a></li>
-            <li><a href="home.jsp#services">Services</a></li>
-              <li><a href="../sipml5/expert.htm" target=newtab>Settings</a></li>  
-<!--             <li><a href="mbook.jsp">Message Book</a></li> -->
-<!--              <li><a href="#portfolio"></a></li> -->
-<!--              <li><a href="#about-us"></a></li> -->
-<!--              <li><a href="home.jsp#styles">Offline Messages</a></li>
-                <li><a href="home.jsp#contact">Contact Us</a></li> -->
-            <li><a href="../logoutServlet">Logout</a></li>
-
-            </ul>
-        </nav>
-
+   <header>	   
+	<div><img src="images/tcs_logo.png"</div>
+	
+	        <nav>
+	            <ul>
+	            <li><a href="home.jsp#main">Home</a></li>
+	            <li><a href="home.jsp#services">Services</a></li>
+	              <li><a href="<%=request.getContextPath()%>/sipml5/expert.htm" target=newtab>Settings</a></li>   
+	              <li><a href="../logoutServlet">Logout</a></li>
+	          </ul>
+	        </nav>
+	
     </header>
 </div>
-<%-- <!-- <div>
 
-//<%
-//	if(session.getAttribute("name")==null)
-//		response.sendRedirect("login.html");	
-//%>
-</div>
---> --%>
 
 
 
 <!-- content-wrap -->
 <div class="content-wrap">
-

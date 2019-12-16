@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>GoogleContacts</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <display-name>GoogleContactsController</display-name>
+    <servlet-name>GoogleContactsController</servlet-name>
+    <servlet-class>com.tcs.GoogleContactsController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GoogleContactsController</servlet-name>
+    <url-pattern>/GoogleContactsController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>GoogleFriendsServlet</display-name>
+    <servlet-name>GoogleFriendsServlet</servlet-name>
+    <servlet-class>com.tcs.GoogleFriendsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GoogleFriendsServlet</servlet-name>
+    <url-pattern>/GoogleFriendsServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <display-name>NewGoogleContactsController</display-name>
+    <servlet-name>NewGoogleContactsController</servlet-name>
+    <servlet-class>com.tcs.NewGoogleContactsController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewGoogleContactsController</servlet-name>
+    <url-pattern>/NewGoogleContactsController</url-pattern>
+  </servlet-mapping>
+</web-app>

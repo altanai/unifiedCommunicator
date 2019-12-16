@@ -39,7 +39,7 @@ public class writegeolocation {
 	
 	ArrayList<geolocation> geodatalist=new ArrayList<geolocation>();
 	
-	public ArrayList<geolocation> viewgeolocationDetails() 
+	public ArrayList<geolocation> viewgeolocationDetails(String user) 
 	{
 		
 		Connection conn=null;
@@ -48,7 +48,8 @@ public class writegeolocation {
 		{
 			Class.forName("com.mysql.jdbc.Driver");
 			conn=DriverManager.getConnection(url, uName, pwd);
-			ps=conn.prepareStatement("Select * from geolocation");
+			/*ps=conn.prepareStatement("Select * from geolocation");*/
+			ps=conn.prepareStatement("select * from webrtcdb.geolocation a join webrtcdb.friendlisttable b on a.sipuri=b.friendSipURI where b.userSipURI='"+user+"'");
 			ResultSet rs=ps.executeQuery();
 			
 			while(rs.next()){
@@ -59,6 +60,7 @@ public class writegeolocation {
 				geo.setLongitude(rs.getString(3));
 				geo.setDate(rs.getString(4));
 				geo.setTime(rs.getString(5));
+				geo.setFriendName(rs.getString(8));
 				geodatalist.add(geo);
 			}
 

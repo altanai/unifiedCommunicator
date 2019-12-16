@@ -1,0 +1,27 @@
+CREATE TABLE `webrtcdb`.`voicemail` (
+  `id` VARCHAR(16) NOT NULL,
+  `fromUser` VARCHAR(45) NOT NULL,
+  `toUser` VARCHAR(45) NOT NULL,
+  `mailTime` DATETIME NOT NULL,
+  `voiceMail` LONGBLOB NOT NULL,
+  `sequence` INT NOT NULL,
+  PRIMARY KEY (`id`));
+
+CREATE TABLE `webrtcdb`.`deletedvoicemails` (
+  `id` VARCHAR(16) NOT NULL,
+  `fromUser` VARCHAR(45) NOT NULL,
+  `toUser` VARCHAR(45) NOT NULL,
+  `mailTime` DATETIME NOT NULL,
+  `voiceMail` LONGBLOB NOT NULL,
+  `sequence` INT NOT NULL,
+  PRIMARY KEY (`id`));
+
+
+
+
+CREATE TABLE `webrtcdb`.`voicemailstatus` (
+  `id` VARCHAR(16) NOT NULL,
+  `status` VARCHAR(6) NOT NULL DEFAULT 'unread',
+  `deletedbysender` VARCHAR(5) NULL DEFAULT 'false',
+  `deletedbyreciever` VARCHAR(5) NULL DEFAULT 'false');
+  

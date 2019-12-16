@@ -17,13 +17,28 @@ ArrayList<geolocation> glocationdata=(ArrayList<geolocation>)request.getAttribut
 <title>Insert title here</title>
 </head>
 <body>
-                   <%
+         <br/>
+         <br/>          
+					<form action="GeolocationfriendmapServlet">
+						<table>
+						<tr>
+						<th>Name</th>
+						<th>Sip URI</th>
+						<th>Latitude</th>
+						<th>Longitude</th>
+						<th>Date</th>
+						<th>Time</th>
+						
+						</tr>
+						
+						<%
 						for (int i = 0; i < glocationdata.size(); i++) {
 
 					%>
-						<table>
-						<form action="GeolocationfriendmapServlet">
 						<tr>
+						<td>
+								<input type="text" name="friendName" value=<%=glocationdata.get(i).getFriendName().toString()%>>&nbsp;	
+							</td>
 							<td>
 								<input type="text" name="sipuri" value=<%=glocationdata.get(i).getSipuri().toString()%>>&nbsp;	
 							</td>
@@ -45,12 +60,13 @@ ArrayList<geolocation> glocationdata=(ArrayList<geolocation>)request.getAttribut
 							</td>
 							
 							<td>
-								<input type="submit" value="submit">	
+								<input type="submit" name="submit"value="Submit">	
 							</td>
 						</tr>
 						
-						</form>
+					<% } %>
 			              </table>
-			         <% } %>
+			              	</form>
+			         
 </body>
 </html>

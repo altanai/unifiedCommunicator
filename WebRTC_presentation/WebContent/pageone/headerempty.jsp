@@ -32,20 +32,19 @@ String theme=ts.getTheme(session.getAttribute("themename").toString());%>
     <script src="js/jquery.fancybox-1.3.4.pack.js"></script>
     <script src="js/init.js"></script>
 
-
-<script>
+ <script>
 var name=session.getAttribute("name");
-var privateIdentity="sip:<%=session.getAttribute("name")%>@tcs.com";
-var realm="tcs.com";
+var privateIdentity=<%=session.getAttribute("privateIdentity")%>;
+var realm=<%=session.getAttribute("releam")%>;
 
-</script>
+</script> 
 
-<script>
+<%--  <script>
 <%
 	if(session.getAttribute("name")==null)
-		response.sendRedirect("login.html");	
+		response.sendRedirect("login.jsp");	
 %>
-</script>
+</script>  --%>
 
 <script type="text/javascript">
     function noBack() { window.history.forward(); }

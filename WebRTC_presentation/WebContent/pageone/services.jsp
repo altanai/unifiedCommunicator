@@ -33,16 +33,20 @@ function hoverimg(elemId){
                 
                 
                 <section class="col mid">
-                    <h2><a href="serviceprofile.jsp" target=newtab>Profile</a></h2>
-                    <p><img class="align-left" alt="" src="images/services/logo-design-and-branding<%=s %>.png" onmouseover="this.width=68;this.height=70;" onmouseout="this.width=60;this.height=62" />Profile Description </p>
+                    <h2><a href=#"" target=newtab>Profile</a></h2>
+                    <p><img class="align-left" alt="" src="images/services/logo-design-and-branding<%=s %>.png" onmouseover="this.width=68;this.height=70;" onmouseout="this.width=60;this.height=62" />
+                    <a href="serviceprofile.jsp" target=newtab>My Profile</a><br>
+                    <a href="<%=request.getContextPath()%>/../Otheraccounts/thirdpartyaccountsfetchServlet?id=<%=session.getAttribute("privateIdentity")%>" target=newtab>Link To Third party accounts</a> <br>
+                    <a href="<%=request.getContextPath()%>/deleteAccountServlet" target=newtab>Delete My account</a></p>
                 </section>
                 
 				
                 <section class="col">
 <%--                   <h2><a href="http://<%=session.getAttribute("serverip")%>:8080/WebRTCCallLogs/logsServlet" target=newtab >History </a></h2> --%>
-                  <h2><a href="servicecalllogs.jsp" target=newtab > History </a></h2> 
-						 <p><img class="align-left" alt="" src="images/services/seo-services<%=s %>.png" onmouseover="this.width=68;this.height=70;" onmouseout="this.width=60;this.height=62" />Call Logs </p>
-
+                  <h2><a href="#" target=newtab >History and Analytics </a></h2> 
+						 <p><img class="align-left" alt="" src="images/services/seo-services<%=s %>.png" onmouseover="this.width=68;this.height=70;" onmouseout="this.width=60;this.height=62" />
+					<a href="servicecalllogs.jsp" target=newtab>Call Logs </a><br>
+                    <a href="servicegraph.jsp" target=newtab>Graphs </a></p>
                 </section>
         
  			</div> 
@@ -50,19 +54,27 @@ function hoverimg(elemId){
  <div class="containsection2">
             <div class="row">
                 <section class="col">
-                    <h2><a href="serviceofflinemessages.jsp" target=newtab> Offline Messages</a></h2>
-                    <p><img class="align-left" alt="" src="images/services/print-design<%=s %>.png" onmouseover="this.width=68;this.height=70;" onmouseout="this.width=60;this.height=62"/> Offline Messages using external services </p>
+                    <h2><a href="#" target=newtab> VoiceMail</a></h2>
+                    <p><img class="align-left" alt="" src="images/services/print-design<%=s %>.png" onmouseover="this.width=68;this.height=70;" onmouseout="this.width=60;this.height=62"/>        
+                     <a href="servicevoicemailrecord.jsp" target=newtab>Record Voice Mail</a><br>
+                    <a href="servicevoicemailview.jsp" target=newtab>Listen Voice Mail</a> </p>
                 </section>
                 
                 <section class="col mid">
-                  <h2><a href="servicegeolocation.jsp" target=newtab> Geolocation </a></h2>
-                    <p><img class="align-left" alt="" src="images/services/webdevelopment<%=s %>.png" onmouseover="this.width=68;this.height=70;" onmouseout="this.width=60;this.height=62" />Location of user and friends </p>
+                  <h2><a href="#" target=newtab> Geolocation </a></h2>
+                    <p><img class="align-left" alt="" src="images/services/webdevelopment<%=s %>.png" onmouseover="this.width=68;this.height=70;" onmouseout="this.width=60;this.height=62" />                   
+                    <a href="servicegeolocation.jsp" target=newtab>Post my Geolocation</a><br>
+                    <a href="servicegeolocationfriends.jsp" target=newtab>Location of a Friend</a><br>
+                     <a href="servicegeolocationfriendstogether.jsp" target=newtab>Location of all Friends</a></p>
                 </section>
 
                 <section class="col">
                 
-                    <h2><a href="servicegraph.jsp" target=newtab> Analytics </a></h2>
-                    <p><img class="align-left" alt="" src="images/services/newsletter<%=s %>.png" onmouseover="this.width=68;this.height=70;" onmouseout="this.width=60;this.height=62"/>Graphical display of my activity </p>
+                    <h2><a href="#" target=newtab>Import Contacts  </a></h2>
+                    <p><img class="align-left" alt="" src="images/services/newsletter<%=s %>.png" onmouseover="this.width=68;this.height=70;" onmouseout="this.width=60;this.height=62"/>
+					<a href="http://localhost:8080/WebRTC_presentation/pageone/servicefbcontacts.jsp" target=newtab >Import contacts from <img src="socialmediaimages/1382539943_facebook_02.png" width="30" height="30" title="facebook"> </a> <br/>
+					<a href="../../GoogleContacts/GoogleContactsController?id=<%=session.getAttribute("privateIdentity")%>" target=newtab >Import contacts from <img src="socialmediaimages/1382539976_social_0.png" width="20" height="20" title="Google Plus"> </a>
+               </p>
                 </section>
     		</div>  
    </div>          

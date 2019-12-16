@@ -1,5 +1,5 @@
 <%@page import="com.tcs.webrtc.uploadmodule.bean.UserProfile"%>
-<%-- <%@include file="header.jsp"%> --%>
+
 
 
 
@@ -59,10 +59,10 @@
 <td>Password:</td>
 <td><input type="text" name="password" value="<%= user.getPassword().toString()%>"></td>
 </tr>
- <tr>
+ <%-- <tr>
 <td>Email:</td>
 <td><input type="text" name="wsUri" value="<%= user.getWsUri().toString()%>"></td>
-</tr> 
+</tr> --%> 
 <tr>
 <td>Realm:</td>
 <td><input type="text" name="realm" value="<%= user.getRealm().toString()%>"><br/><br/></td>
@@ -90,4 +90,4 @@
  <!------------------------------------------ services -------------------------------------------->
 
 
-<%-- <%@include file="footer.jsp" %> --%>
+

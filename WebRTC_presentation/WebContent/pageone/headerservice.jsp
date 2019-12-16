@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <%@page import="com.tcs.css.ThemeSelector"%>
-<head>
+
 <!-- themes selecetor code  -->
 <%session.setAttribute("themename", "blue");
 ThemeSelector ts=new ThemeSelector();
@@ -33,17 +33,17 @@ String theme=ts.getTheme(session.getAttribute("themename").toString());%>
     <script src="js/init.js"></script>
 
 
-<script>
+ <script>
 var name=session.getAttribute("name");
 var privateIdentity="sip:<%=session.getAttribute("name")%>@tcs.com";
 var realm="tcs.com";
 
-</script>
+</script> 
 
 <script>
 <%
 	if(session.getAttribute("name")==null)
-		response.sendRedirect("login.html");	
+		response.sendRedirect("login.jsp");	
 %>
 </script>
 

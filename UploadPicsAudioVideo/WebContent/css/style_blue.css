@@ -197,7 +197,7 @@ mark {
     height: 70px;
     z-index: 99999;
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
 }
 header {
@@ -310,11 +310,10 @@ header {
 }
 
 footer {
-    position: absolute;
+    position: relative;
     background: url(../images/section-sep.png) repeat-x left 25px;
     width: 940px;
     margin: 0 auto;
-    bottom: 0px;
     padding-top: 125px;
 }
 

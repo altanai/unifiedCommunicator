@@ -21,6 +21,9 @@ import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.IOUtils;
 
+import setups.database_server;
+import setups.presentation_server;
+
 import com.tcs.webrtc.uploadmodule.Dao.CreateUserDao;
 import com.tcs.webrtc.uploadmodule.Dao.updateDetailsDao;
 import com.tcs.webrtc.uploadmodule.bean.UserProfile;
@@ -32,14 +35,32 @@ import com.tcs.webrtc.uploadmodule.bean.UserProfile;
 public class updateDetailsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private static String url="jdbc:mysql://10.1.5.15:3306/webrtcdb";
-	private static String uName="altanai";
-	private static String pwd="altanai";
+	String url;
+   	String uName;
+   	String pwd;
 	
+	String serverip=null;
 	
+	String rdarr[]=new String[1];
+	String rdarr2[]=new String[3];
 	
     public updateDetailsServlet() {
         super();
+        
+presentation_server ps=new presentation_server();
+    	
+    	rdarr=ps.read_presentation_server_file();
+    	serverip=rdarr[0];
+    	
+    	
+    	
+		database_server ds=new database_server();
+
+		rdarr2=ds.read_database_server_file();
+		
+		url="jdbc:mysql://"+rdarr2[0]+":3306/webrtcdb";
+		uName=rdarr2[1];
+		pwd=rdarr2[2];
         // TODO Auto-generated constructor stub
     }
 
@@ -55,7 +76,7 @@ public class updateDetailsServlet extends HttpServlet {
 		
 		
 		String privateIdentity =request.getParameter("privateIdentity");
-		System.out.println("++++++"+privateIdentity);
+	
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
@@ -96,7 +117,7 @@ public class updateDetailsServlet extends HttpServlet {
 			else{
 				conn.rollback();
 			}
-			response.sendRedirect("http://localhost:8080/UploadPicsAudioVideo/CreateUserServlet?action=getUser&id="+privateIdentity);
+			response.sendRedirect("http://"+serverip+":8080/UploadPicsAudioVideo/CreateUserServlet?action=getUser&id="+privateIdentity);
 		}
 		catch(ClassNotFoundException e)
 		{
@@ -136,9 +157,9 @@ public class updateDetailsServlet extends HttpServlet {
 					if(item.isFormField())
 					{
 						String name=item.getFieldName();
-						System.out.println("++++++"+name);
+						
 						String value=item.getString();
-						System.out.println("++++++++++"+value);
+						
 						if(name.equalsIgnoreCase("name"))
 							user.setName(value);
 /*						if(name.equalsIgnoreCase("userid"))
@@ -153,18 +174,6 @@ public class updateDetailsServlet extends HttpServlet {
 							user.setProfilepic(item.get());
 							user.setPicfile(item.getName());
 						}
-						
-					/*if(name.equalsIgnoreCase("picture")&& item.get().length==0)
-						{
-							System.out.println("when image is default ");
-							//File image = new File("UploadPicsAudioVideo/images/thumb-pic.png"); 
-							File image = new File("C:/altanai/thumb-pic.png");
-							inputStream = new FileInputStream(image); 
-							byte[] bytes = IOUtils.toByteArray(inputStream);
-							user.setProfilepic(bytes);
-							user.setPicfile("default");
-						}
-						*/
 						
 						
 					}
@@ -184,7 +193,7 @@ public class updateDetailsServlet extends HttpServlet {
 				/* request.setAttribute("msg",addResult);
 				 request.getRequestDispatcher("ViewResult.jsp").forward(request, response);*/
 
-                  response.sendRedirect("http://localhost:8080/UploadPicsAudioVideo/CreateUserServlet?action=getUser&id="+user.getName());
+                  response.sendRedirect("http://"+serverip+":8080/UploadPicsAudioVideo/CreateUserServlet?action=getUser&id="+user.getName());
 			}
 			catch(Exception e)
 			{

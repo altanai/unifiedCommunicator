@@ -11,10 +11,7 @@ import com.tcs.webrtc.uploadmodule.bean.UserProfile;
 
 public class updateDetailsDao {
 
-	/*	
-	private static String url="jdbc:mysql://10.1.5.35:3306/webrtcdb";
-	private static String uName="altanai";
-	private static String pwd="altanai";*/
+	
 	
 	String url;
 	String uName;
@@ -45,15 +42,7 @@ public class updateDetailsDao {
 			Class.forName("com.mysql.jdbc.Driver");
 			conn=DriverManager.getConnection(url, uName, pwd);
 			
-		/*	conn.setAutoCommit(false);
 	
-		
-		System.out.println("2");
-		ps=conn.prepareStatement("delete from webrtcdb.userprofile where username=?");
-		ps.setString(1, user.getName());
-		System.out.println("3");
-		int x=ps.executeUpdate();
-		System.out.println("int "+x);*/
 	  	ps1=conn.prepareStatement("update userprofile set profilepic=?,picfile=? where username=?");			
 	//	ps.setString(1, user.getId());
 	  	ps1.setBytes(1, user.getProfilepic());
@@ -61,23 +50,7 @@ public class updateDetailsDao {
 		ps1.setString(3, user.getName());
 		
 		result=ps1.executeUpdate();
-			
-	/*	ps1=conn.prepareStatement("insert into webrtcdb.userprofile values(?,?,?,?,?,?,?");
-		ps1.setString(1, user.getName());
-		ps1.setBytes(2, user.getProfilepic());
-		ps1.setString(3, user.getPicfile());
-		ps1.setBytes(4, user.getFavaudio());
-		ps1.setString(5,user.getAudiofile());
-		ps1.setBytes(6,user.getFavvideo());
-		ps1.setString(7, user.getVideofile());
-		int y=ps1.executeUpdate();
-		if(x>0&&y>0){
-	conn.commit();
-		
-	}
-		else{
-			conn.rollback();
-		}*/
+	
 		}
 		catch(ClassNotFoundException e)
 		{
