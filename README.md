@@ -1,4 +1,4 @@
-## Unified Communcator and Collaborator for Enterperise
+# UUnified Communicator and Collaborator for Enterprise
 
 Modular enterprise communicator solution for enterprise based communication and collaboration . Use sipml5 client side libarary to provide webRTC based media stream capture and propagration from client side without external plugins.
 
@@ -50,6 +50,46 @@ Technologies used :
 -- tbd --
 
 ## Release Notes 
+
+### Version 1 :
+
+- Single Sign On
+- Login with id and password to access all services
+- Audio / Video Call
+    - Call Hold / Call Transfer
+- Messaging:
+    - SIP Instant Messaging
+    - Message to Facebook Messenger
+    - Message delivered as Email
+- Chatroom
+    - group chat between multiple users . Room is created for set of users .
+- Video Conferencing
+    - video chat between multiple parties . Room is created for set of users .
+- File Transfer
+    - Sharing of files from local to remote , in peer-to-peer and broadcasting fashion .
+- Third party Webservices
+    - Widgets like calendar , weather , stocks , twitter are embedded.
+- Visual Voice Mail
+    - Record and deliver voice message to recipients voice mail inbox which can be accessed/ played from web client .
+- Phonebook 
+    - cloud integration
+    - add new entries
+    - add photos to contacts identity
+    - import contacts from google account
+- Click to Call :
+    - Drop down list of contacts form mail call console
+    - 2 step Click to call from Phonebook
+- Presence :
+    - Publish online / offline status
+    - Use Subscribe / notify requests of SIP
+- Web Ssocket  to SIP Gateway
+    - Conversion between the signal coming from the  WebRTC  and SIP client  to the  IMS core
+    - Conversion of  “voice/video " media  between sRTP and RTP
+    - Conversion of other media (data channel) towards MSRP and Transcoding.
+    - Support of ICE procedure
+    - Implementation of a STUN server
+- QoS Support  
+
 
 ### Version 2 :
 
