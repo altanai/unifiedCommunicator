@@ -51,6 +51,36 @@ Technologies used :
 
 ## Release Notes 
 
+### Version 2 :
+
+- Logs
+    - calls logs
+    - Message logs
+- User Profile
+    - user details like address , email and social networking accounts
+    - Phonenumber for GSM integration through SMS
+    - User's Media storage like Pictures , profile picture , Audio , video
+    - File sharing documents storage for future access in the same format
+- Real Time and Offline Analytics
+- service usage with graphical and tabular history  trends
+- Session Management
+    - Single Sign-on
+    - Forgot password regeneration using secure question
+    - Registration of new user account
+    - Logout and clearance of session parameters
+- Security
+    - No redirection to any page through url entry without valid session
+    - No going back to home page after logout by back button on browser
+    - No data vulnerability
+    - Multiple login through different devices handled
+- OAuth
+    - Login via IMAP / token through facebook and Google
+- Phonebook with Presence functionality inbuilt
+- Directory Service based on country / region
+- Geolocation of approximate location detection of device logged in and visibility to  others
+
+### Version 3 :
+
 - Integration with new age CSP deployments like VoLTE, ViLTE, VoWiFi 
 - Multi vendor support
 - Interactive webrtc services 
