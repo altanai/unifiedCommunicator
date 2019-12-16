@@ -1,4 +1,4 @@
-# UUnified Communicator and Collaborator for Enterprise
+# Unified Communicator and Collaborator for Enterprise
 
 Modular enterprise communicator solution for enterprise based communication and collaboration . Use sipml5 client side libarary to provide webRTC based media stream capture and propagration from client side without external plugins.
 
