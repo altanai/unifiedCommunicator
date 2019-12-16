@@ -78,8 +78,8 @@ function compressCode(){
 }
 
 	//read ip from file 
-	 var ip="10.1.5.23";
-/* 	var ip;
+//	 var ip="10.1.5.3";
+ 	var ip;
 	   function readip()
 	   {
 	   var pathOfFileToRead = "presentation_server_config.txt";
@@ -103,7 +103,7 @@ function compressCode(){
 	   	}
 	   }
 	   readip();  
-	   alert(" ip from file "+ ip) */
+	 
 	  //reda server ip from file end      
 	    
 function dofriendadd(element) 
@@ -111,8 +111,8 @@ function dofriendadd(element)
 
     var xmlHttp = new XMLHttpRequest(); 
     var frinedtobeadded = document.getElementById(element).value;
-    //alert("frind to be added "+ frinedtobeadded);
-    xmlHttp.open("GET","http://"+ip+":8080/WebRTC_presentation/FriendListController?action=findFriendURI&friendName="+frinedtobeadded, true);     
+   // alert("frind to be added "+ frinedtobeadded+ " ip "+ ip);
+    xmlHttp.open("GET","http://<%=session.getAttribute("serverip")%>:8080/WebRTC_presentation/FriendListController?action=findFriendURI&friendName="+frinedtobeadded, true);     
     xmlHttp.send(); 
     setTimeout(function(){compressCode();},700);
     
@@ -124,7 +124,7 @@ function dofriendremove(element)
     var frinedtoberemoved = document.getElementById(element).innerHTML;
     //var frinedtoberemoved = document.getElementById('friendsipuri').innerHTML;
    // alert("frind to be removed : "+frinedtoberemoved );
-    xmlHttp.open("GET","http://"+ip+":8080/WebRTC_presentation/FriendListController?action=removefriend&friendName="+frinedtoberemoved, true);     
+    xmlHttp.open("GET","http://<%=session.getAttribute("serverip")%>:8080/WebRTC_presentation/FriendListController?action=removefriend&friendName="+frinedtoberemoved, true);     
     xmlHttp.send(); 
     setTimeout(function(){compressCode();},700);
 }
@@ -136,7 +136,13 @@ function dofriendremove(element)
 			<div style="width:75%; float:left; ">			
 		        <table>
 		        <tr>
-		        <td><iframe src="../sipml5/callim.jsp?ip=<%=session.getAttribute("serverip")%>&name=<%=session.getAttribute("name")%>&privateIdentity=sip:<%=session.getAttribute("name")%>@tcs.com&realm=tcs.com" 
+		        <td><iframe src="../sipml5/callim.jsp?
+		        ip=<%=session.getAttribute("serverip")%>
+		        &name=<%=session.getAttribute("name")%>
+		        &privateIdentity=<%=session.getAttribute("privateIdentity")%>
+		        &publicIdentity=<%=session.getAttribute("publicIdentity")%>
+		        &password=<%=session.getAttribute("password")%>
+		        &realm=<%=session.getAttribute("releam")%>" 
 		        id="myIframe" frameborder="0" width="700" height="700" align="left" scrolling="no"></iframe>           
 		        </td>
 		        </tr>
@@ -167,12 +173,17 @@ function dofriendremove(element)
  			
  			<div id="myDiv" style="width:25%; float:right; overflow:auto; height:675px;"> 
  
-
+             <!--  div to show the frinds  -->
+                     
             </div> 
+            
             
         </td>
         <td>
-	        &nbsp;&nbsp;
+	        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	        
+	         <iframe src="http://<%=session.getAttribute("serverip")%>:8080/WebRTCNotifications/Notifier.jsp?user=<%=session.getAttribute("user")%>"  height="100" width="400"  frameborder="0" scrolling="yes"></iframe>       
+	        
        
 	     <!--    <button><img src="images/iconstar.png"></button>
 	        <button><img src="images/icongroup.png"></button> -->
@@ -190,4 +201,4 @@ function dofriendremove(element)
    </section>
 
 
-<%@include file="footer.jsp" %>
+<div id ="footer-wrap"></div>

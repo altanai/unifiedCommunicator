@@ -41,7 +41,7 @@ String theme=ts.getTheme(session.getAttribute("themename").toString());%>
     <script src="js/jquery.fancybox-1.3.4.pack.js"></script>
     <script src="js/init.js"></script>
     
-
+<%@ include file="google/oauthgooglehead.jsp" %>
 
 </head>
 
@@ -61,25 +61,25 @@ String theme=ts.getTheme(session.getAttribute("themename").toString());%>
                 <li><a href="contact.jsp">Contact Us</a></li>
             </ul>-->
             
-            <form method="post" action="../loginServlet" id="loginform" onsubmit="return validateLogin(this);">
-<table align="right">
-                   <tr>
-                    <td> Username : 
-                    <input name="userName" type="text" id="userName" /><p id="nameError1" style="color: blue;font-size: 12px"></p>
-                    </td>                 
-                    <td>Password : 
-                    <input name="password" type="password" id="password1" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p id="passwordError1" style="color: blue;font-size: 12px"></p>
-                  </td>
-<td  align="right">
-					<input type="submit"  value="Login" class="button">
-         			<!-- <input type="reset" value="Reset" class="button"> -->
-         			</td>
-					</tr>
-					<tr>
+            <form method="post"  id="loginform" onsubmit="return validateLogin(this);" action="../loginServlet">
+	<table align="right">
+              <tr>
+	                    <td> Username : 
+	                    <input name="userName" type="text" id="userName" /><p id="nameError1" style="color: blue;font-size: 12px"></p>
+	                    </td>                 
+	                    <td>Password : 
+	                    <input name="password" type="password" id="password1" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p id="passwordError1" style="color: blue;font-size: 12px"></p>
+	                   </td>
+						<td  align="right">
+						<input type="submit"  value="Login" class="button">
+	         			<!-- <input type="reset" value="Reset" class="button"> -->
+	         			</td>
+			</tr>
+			<tr>
 					
 					<td  colspan="3" align="right"><a href="forgotPassword.jsp">Forgot Password</a><br/></td>
 					<!--  <td><a href="../sipml5/expert.htm" target=newtab> Settings </a><br/></td>-->
-					</tr>
+			</tr>
     </table>
                 </form>
             

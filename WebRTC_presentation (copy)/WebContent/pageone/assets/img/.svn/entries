@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="144"
+   name=""
+   committed-date="2012-12-17T06:45:03.465174Z"
+   url="http://sipml5.googlecode.com/svn/trunk/release/assets/img"
+   last-author="bossiel@yahoo.fr"
+   kind="dir"
+   uuid="63d8a0da-676c-2731-e3aa-b417aa27da68"
+   repos="http://sipml5.googlecode.com/svn"
+   revision="175"/>
+<entry
+   name="glyphicons"
+   kind="dir"/>
+<entry
+   committed-rev="144"
+   name="less-logo-large.png"
+   text-time="2013-03-19T06:51:48.484537Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="f69424c4b0b40874973331a991e7f69f"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:47.187662Z"/>
+<entry
+   committed-rev="144"
+   name="less-small.png"
+   text-time="2013-03-19T06:51:48.547037Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="b92e5666aa75aa728a6ec3380c0e6115"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:47.515787Z"/>
+<entry
+   committed-rev="144"
+   name="github-16px.png"
+   text-time="2013-03-19T06:51:48.625162Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="ca550b741be138efc4fea6755174130d"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:47.531412Z"/>
+<entry
+   committed-rev="144"
+   name="icon-html5.png"
+   text-time="2013-03-19T06:51:48.656412Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="78387938d575898cbab74b7374ac46ac"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:47.547037Z"/>
+<entry
+   committed-rev="144"
+   name="icon-css3.png"
+   text-time="2013-03-19T06:51:48.656412Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="0e2f8caa273fa0e906e6c8fe33e171ef"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:47.547037Z"/>
+<entry
+   committed-rev="144"
+   name="glyphicons-halflings-white.png"
+   text-time="2013-03-19T06:51:48.672037Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="11118ae8db796d41dd11482067c89d01"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:47.640787Z"/>
+<entry
+   committed-rev="144"
+   name="glyphicons-halflings.png"
+   text-time="2013-03-19T06:51:48.687662Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="531d4b607365ac65b09a181216f0664d"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:47.765787Z"/>
+<entry
+   committed-rev="144"
+   name="grid-18px-masked.png"
+   text-time="2013-03-19T06:51:48.687662Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="cbad2e1df78c6f97c4502358cb185572"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:47.781412Z"/>
+<entry
+   committed-rev="144"
+   name="browsers.png"
+   text-time="2013-03-19T06:51:48.687662Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="16ae6a022c7e1ea25fcf33d1a3dfd596"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:48.375162Z"/>
+<entry
+   committed-rev="144"
+   name="responsive-illustrations.png"
+   text-time="2013-03-19T06:51:48.703287Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="6442c0c7534575ded2114bbe9d9f2d85"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:48.390787Z"/>
+<entry
+   committed-rev="144"
+   name="icon-twitter.png"
+   text-time="2013-03-19T06:51:48.703287Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="4abe55815948ac69b524860ddd0a9fa9"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:48.453287Z"/>
+<entry
+   committed-rev="144"
+   name="icon-github.png"
+   text-time="2013-03-19T06:51:48.718912Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="39f9da342aaac49e74747aed11475e35"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:48.468912Z"/>
+</wc-entries>

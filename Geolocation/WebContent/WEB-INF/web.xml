@@ -22,6 +22,26 @@
     <servlet-name>ViewServlet</servlet-name>
     <url-pattern>/ViewServlet</url-pattern>
   </servlet-mapping>
+  
+    <servlet>
+    <display-name>ViewServletTogether</display-name>
+    <servlet-name>ViewServletTogether</servlet-name>
+    <servlet-class>com.tcs.geolocation.controller.ViewServletTogether</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewServletTogether</servlet-name>
+    <url-pattern>/ViewServletTogether</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <display-name>ViewUserServlet</display-name>
+    <servlet-name>ViewUserServlet</servlet-name>
+    <servlet-class>com.tcs.geolocation.controller.ViewUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewUserServlet</servlet-name>
+    <url-pattern>/ViewUserServlet</url-pattern>
+  </servlet-mapping>
   <servlet>
     <display-name>GeolocationfriendmapServlet</display-name>
     <servlet-name>GeolocationfriendmapServlet</servlet-name>

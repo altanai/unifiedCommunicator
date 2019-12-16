@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>Geolocation</display-name>
+  <welcome-file-list>
+    <welcome-file>geolocation.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <display-name>GeolocationstoreServlet</display-name>
+    <servlet-name>GeolocationstoreServlet</servlet-name>
+    <servlet-class>com.tcs.geolocation.controller.GeolocationstoreServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GeolocationstoreServlet</servlet-name>
+    <url-pattern>/GeolocationstoreServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>ViewServlet</display-name>
+    <servlet-name>ViewServlet</servlet-name>
+    <servlet-class>com.tcs.geolocation.controller.ViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewServlet</servlet-name>
+    <url-pattern>/ViewServlet</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <display-name>ViewUserServlet</display-name>
+    <servlet-name>ViewUserServlet</servlet-name>
+    <servlet-class>com.tcs.geolocation.controller.ViewUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewUserServlet</servlet-name>
+    <url-pattern>/ViewUserServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <display-name>GeolocationfriendmapServlet</display-name>
+    <servlet-name>GeolocationfriendmapServlet</servlet-name>
+    <servlet-class>com.tcs.geolocation.controller.GeolocationfriendmapServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GeolocationfriendmapServlet</servlet-name>
+    <url-pattern>/GeolocationfriendmapServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

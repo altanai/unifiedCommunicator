@@ -7,13 +7,7 @@
   <col width="1000">
   <col width="1000">
 
-<%-- <tr>
-<td>
-    	     <!-- -----Sign in   -->
-			<%@ include file="signin.jsp" %>
-			<!-- end signin -->       
-</td>
-</tr> --%>
+
 <tr>
 <td>
 <img src="images/slides/images.jpg">

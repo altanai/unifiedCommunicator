@@ -110,15 +110,20 @@ function eraseResponseMessage()
 function endCall()//ADD These to the original hangup javascript
 {
 	user = document.getElementById("user").value;
-	//alert( "user "+user );
+	/* alert( "user "+user ); */
 	arr=new Array();
 	arr[arr.length]=user;
     arr[arr.length]=latitude;
 	arr[arr.length]=longitude;
 	
-	var DateTime=new Date();
-	arr[arr.length]=DateTime.getDate();
-	arr[arr.length]=DateTime.getTime();
+var DateTime=new Date(); 
+ arr[arr.length]=DateTime.getDate() + "/" + (DateTime.getMonth() + 1) + "/" + DateTime.getFullYear().toString().substr(2,2);
+	/* alert("date"+DateTime.getDate() + "/" +(DateTime.getMonth() + 1) + "/" + DateTime.getFullYear().toString().substr(2,2)); */
+
+	
+	
+	arr[arr.length]= DateTime.getHours() + ':' + DateTime.getMinutes() + ':'+ DateTime.getSeconds();
+	/* alert("time"+DateTime.getHours() + ':' + DateTime.getMinutes() + ':' + DateTime.getSeconds()); */
 
 	sendDataToUpload();
 }
@@ -126,7 +131,7 @@ function endCall()//ADD These to the original hangup javascript
 function sendDataToUpload() //This function makes use of AJAX To Call the Servlet
 {
 	serverip=document.getElementById("serverip").value;
-	//alert( "server ip "+ serverip );
+	/* alert( "server ip "+ serverip ); */
 	xmlHttpRequest.open("POST", "http://"+serverip+":8080/Geolocation/GeolocationstoreServlet?sipuri="+arr[0]+"&latitude="+arr[1]+"&longitude="+arr[2]+"&date="+arr[3]+"&time="+arr[4], true);
 	xmlHttpRequest.onreadystatechange=receiveMessageFromServer;
 	xmlHttpRequest.send();
@@ -150,20 +155,25 @@ function receiveMessageFromServer()
   </head>
   <body>
   
-  <H2 style="color: gray;" align="center">Geolocation service</H2>
+  <H2 style="color: gray;" align="center">Geolocation Service</H2>
 
 <table align="center">
 <!-- <tr><td></td><td></td></tr>
 <tr><td>Sender:</td><td><input type="text" name="caller" id="caller" onfocus="eraseResponseMessage()"></td></tr>
 <tr><td>Receiver:</td><td><input type="text" name="callee" id="callee"></td></tr>
 <tr><td><br/></td><td><br/></td></tr> -->
-<tr>
 
+<tr>
 	<td align="center" ><button id="HangUp" onclick="makeSipCall();endCall()">Share My Location</button></td>
 	<td> <input type="text" value=<%=session.getAttribute("user")%> id="user" name="user"> </td>
 	<td> <input type="text" value=<%=session.getAttribute("serverip")%> id="serverip" name="serverip" style="display:none"> </td>
-	<td> <a href="ViewServlet">View Location of Others </a></td>
 </tr>
+
+<tr>	
+	<td> <a href="ViewServlet?user=<%=session.getAttribute("user")%>">View Location of Friends Individually</a></td>
+	<td> <a href="ViewServletTogether?user=<%=session.getAttribute("user")%>">View Location of Friends on One Map </a></td>
+</tr>
+
 </table>
 
 <h3 align="center" id="serverReply"></h3>

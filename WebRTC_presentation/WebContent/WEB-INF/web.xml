@@ -86,15 +86,6 @@
     <url-pattern>/forgotPasswordServlet</url-pattern>
   </servlet-mapping>
   <servlet>
-    <display-name>CreateUserServlet</display-name>
-    <servlet-name>CreateUserServlet</servlet-name>
-    <servlet-class>com.tcs.webrtc.uploadmodule.controller.CreateUserServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>CreateUserServlet</servlet-name>
-    <url-pattern>/CreateUserServlet</url-pattern>
-  </servlet-mapping>
-  <servlet>
     <display-name>SubscribeServlet</display-name>
     <servlet-name>SubscribeServlet</servlet-name>
     <servlet-class>SubscribeServlet</servlet-class>
@@ -103,8 +94,7 @@
     <servlet-name>SubscribeServlet</servlet-name>
     <url-pattern>/SubscribeServlet</url-pattern>
   </servlet-mapping>
-
-    <servlet>
+  <servlet>
     <display-name>PresenceServlet</display-name>
     <servlet-name>PresenceServlet</servlet-name>
     <servlet-class>PresenceServlet</servlet-class>
@@ -113,8 +103,7 @@
     <servlet-name>PresenceServlet</servlet-name>
     <url-pattern>/PresenceServlet</url-pattern>
   </servlet-mapping>
-  
-      <servlet>
+  <servlet>
     <display-name>CreateUserServlet1</display-name>
     <servlet-name>CreateUserServlet1</servlet-name>
     <servlet-class>phonebook.webrtc.CreateUserServlet1</servlet-class>
@@ -122,6 +111,16 @@
   <servlet-mapping>
     <servlet-name>CreateUserServlet1</servlet-name>
     <url-pattern>/CreateUserServlet1</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <display-name>CreateUserServlet</display-name>
+    <servlet-name>CreateUserServlet</servlet-name>
+    <servlet-class>newaccount.webrtc.CreateUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateUserServlet</servlet-name>
+    <url-pattern>/CreateUserServlet</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -133,7 +132,6 @@
     <servlet-name>FriendListController</servlet-name>
     <url-pattern>/FriendListController</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <display-name>deleteAccountServlet</display-name>
     <servlet-name>deleteAccountServlet</servlet-name>
@@ -143,5 +141,4 @@
     <servlet-name>deleteAccountServlet</servlet-name>
     <url-pattern>/deleteAccountServlet</url-pattern>
   </servlet-mapping>
-  
 </web-app>

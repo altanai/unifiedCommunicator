@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="144"
+   name=""
+   committed-date="2012-12-17T06:45:03.465174Z"
+   url="http://sipml5.googlecode.com/svn/trunk/release/assets/img/glyphicons"
+   last-author="bossiel@yahoo.fr"
+   kind="dir"
+   uuid="63d8a0da-676c-2731-e3aa-b417aa27da68"
+   repos="http://sipml5.googlecode.com/svn"
+   revision="175"/>
+<entry
+   committed-rev="144"
+   name="glyphicons_214_resize_small.png"
+   text-time="2013-03-19T06:51:47.468912Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="cdd0766f425492ef28a7cd5171a64ab9"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:47.343912Z"/>
+<entry
+   committed-rev="144"
+   name="glyphicons_155_show_thumbnails.png"
+   text-time="2013-03-19T06:51:47.468912Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="8e40a812fb583b415f0af861b718007b"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:47.359537Z"/>
+<entry
+   committed-rev="144"
+   name="glyphicons_042_group.png"
+   text-time="2013-03-19T06:51:47.484537Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="05471736789f7b5f50bd5c6c85f531f4"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:47.390787Z"/>
+<entry
+   committed-rev="144"
+   name="glyphicons_009_magic.png"
+   text-time="2013-03-19T06:51:47.484537Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="2a9f4821f7d63b2807458701dd7c2ef3"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:47.406412Z"/>
+<entry
+   committed-rev="144"
+   name="glyphicons_266_book_open.png"
+   text-time="2013-03-19T06:51:47.500162Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="627e0145fb69187961ea2fccce6e3f80"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:47.437662Z"/>
+<entry
+   committed-rev="144"
+   name="glyphicons_082_roundabout.png"
+   text-time="2013-03-19T06:51:47.500162Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="18c1543c8eeb7779f1ad07336d253f74"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:47.437662Z"/>
+<entry
+   committed-rev="144"
+   name="glyphicons_163_iphone.png"
+   text-time="2013-03-19T06:51:47.500162Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="caf6665f0dd6d82482627a2362792a88"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:47.453287Z"/>
+<entry
+   committed-rev="144"
+   name="glyphicons_079_podium.png"
+   text-time="2013-03-19T06:51:47.515787Z"
+   committed-date="2012-12-17T06:45:03.465174Z"
+   checksum="6dee2c93153a4055a1ac9d685fe63c73"
+   last-author="bossiel@yahoo.fr"
+   kind="file"
+   prop-time="2013-03-19T06:51:47.453287Z"/>
+</wc-entries>

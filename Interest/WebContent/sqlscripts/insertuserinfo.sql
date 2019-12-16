@@ -1,0 +1,1 @@
+insert into user_info values ('sip:bob@tcs.com', '24 avaneue' , 'newyork','none','USA','+187687657','professional');

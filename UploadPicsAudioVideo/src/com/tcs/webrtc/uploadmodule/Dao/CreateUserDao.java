@@ -6,10 +6,7 @@ import setups.database_server;
 
 import com.tcs.webrtc.uploadmodule.bean.UserProfile;
 public class CreateUserDao {
-/*	
-	private static String url="jdbc:mysql://10.1.5.35:3306/webrtcdb";
-	private static String uName="altanai";
-	private static String pwd="altanai";*/
+
 	
 	String url;
 	String uName;
@@ -98,6 +95,7 @@ public class CreateUserDao {
 	public UserProfile getUser(String id) //to fetch an individual user based on his/her id 
 	{
 		System.out.println("dao..."+id);
+
 		Connection conn=null;
 		UserProfile user=null;
 		try
@@ -110,6 +108,7 @@ public class CreateUserDao {
 			/*PreparedStatement ps=conn.prepareStatement("update  webrtcdb.userprofile as a , webrtcdb.registrationtable as b join webrtcdb.userprofile as a on a.username=b.privateIdentity where a.username=?");*/
 			
 			ps.setString(1, id);
+			
 			
 			ResultSet rs=ps.executeQuery();
 			while(rs.next())

@@ -2,7 +2,7 @@ package com.tcs.geolocation.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,7 +12,7 @@ import setups.presentation_server;
 /**
  * Servlet implementation class GeolocationfriendmapServlet
  */
-@WebServlet("/GeolocationfriendmapServlet")
+
 public class GeolocationfriendmapServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -38,13 +38,14 @@ public class GeolocationfriendmapServlet extends HttpServlet {
 	String serverip=rdarr[0];
 	//--------------------------pr4esentation server
 		
+	    String name=request.getParameter("friendName");
 		String sipuri=request.getParameter("sipuri");
 		String latitude=request.getParameter("latitude");
 		String longitude=request.getParameter("longitude");
 		String date=request.getParameter("date");
 		String time=request.getParameter("time");
 		System.out.println(" Friend Latitude " + latitude + " Friend longtitude "+ longitude);
-		response.sendRedirect("http://"+serverip+":8080/Geolocation/geolocationfriend.jsp?friendlatitude="+latitude+"&friendlongitude="+longitude);
+		response.sendRedirect("http://"+serverip+":8080/Geolocation/geolocationfriend.jsp?friendlatitude="+latitude+"&friendlongitude="+longitude+"&friendName="+name);
 	}
 
 	/**

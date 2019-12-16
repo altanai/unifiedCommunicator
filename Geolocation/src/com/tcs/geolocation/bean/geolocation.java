@@ -6,6 +6,7 @@ String latitude;
 String longitude;
 String date;
 String time;
+String friendName;
 public geolocation(String sipuri, String latitude, String longitude,
 		String date, String time) {
 	super();
@@ -14,6 +15,7 @@ public geolocation(String sipuri, String latitude, String longitude,
 	this.longitude = longitude;
 	this.date = date;
 	this.time = time;
+	
 }
 public geolocation() {
 	// TODO Auto-generated constructor stub
@@ -48,7 +50,12 @@ public String getTime() {
 public void setTime(String time) {
 	this.time = time;
 }
-
+public String getFriendName() {
+	return friendName;
+}
+public void setFriendName(String friendName) {
+	this.friendName = friendName;
+}
 
 
 }

@@ -94,19 +94,15 @@
                 <section style="margin-top:10px;">
                 <h2 style="display: block;text-align:left; font-size: 1em;"><span style="color:#0370ea;">Conferencing Details</span></h2>
               <select id="session" title="Session">
-                      <option selected>Select mode of Conferencing</option>
-                        
-                        <option>audio+video+data</option>						
-                       
-                   
-                        <option >audio+video</option>
-                        
+              
+                      <option selected>Select mode of Conferencing</option>         
+                        <option>audio+video+data</option>						            
+                        <option >audio+video</option>    
                         <option>audio+data</option>
                         <option>video+data</option>
                         <option>audio</option>
                         <option>video</option>
-                        <option>data</option>
-                        
+                        <option>data</option>                      
                     </select>
                     
                     
@@ -167,7 +163,7 @@
                     var channel = config.channel || this.channel;
                    
                     var sender = Math.round(Math.random() * 999999999) + 999999999;
-                    var websocket = new WebSocket('ws:10.1.5.15:8888');
+                    var websocket = new WebSocket('ws://10.1.5.19:8888');
                     websocket.channel = config.channel || this.channel;
                     websocket.onopen = function() {
                         websocket.push(JSON.stringify({
@@ -186,14 +182,6 @@
                             channel: websocket.channel
                         }));
                     };
-                
-
-                   
-
-                    
-                
-                    
-
                     //socket.on('message', config.onmessage);
                 };
 
@@ -363,15 +351,7 @@
 
                 connection.connect();
             </script>
-            
-           
-        
-           
-        
-       
-   
-      
-       
+            `1
     
        
     </body>

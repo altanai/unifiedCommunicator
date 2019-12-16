@@ -50,6 +50,7 @@ public class GeolocationstoreServlet extends HttpServlet {
 		String longitude=request.getParameter("longitude");
 		String date=request.getParameter("date");
 		String time=request.getParameter("time");
+		
 		System.out.println("-->"+sipuri+" "+latitude+longitude);
 		System.out.println("--"+ date + time);
 		
@@ -58,8 +59,5 @@ public class GeolocationstoreServlet extends HttpServlet {
 		writegeolocation wg=new writegeolocation();
 		int result= wg.addgeolocationDetails(gdata);
 		System.out.println(" Lines inserted  "+ result);
-		
-		
-	}
-
+    }
 }

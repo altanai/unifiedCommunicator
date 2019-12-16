@@ -1,15 +1,30 @@
-<%@include file="headerservice.jsp" %>
+ <%@include file="headerloginnew.jsp" %>
 
 
  <!----------------------------------------------------- main ---------------------------->
     <section id="main">
 
-          <iframe src="../../UploadPicsAudioVideo/CreateUserServlet?action=getUser&id=sip:<%=session.getAttribute("name")%>@tcs.com"  height="500" width="1000"  frameborder="0" scrolling="no"></iframe>       
-    <h4 align="center"><a href="<%=request.getContextPath()%>/deleteAccountServlet" > Delete My Account </a></h4>
-    
-      </section>
+<table>
+<tr>
+<td> <iframe src="../../UploadPicsAudioVideo/CreateUserServlet?action=getUser&id=<%=session.getAttribute("privateIdentity")%>"  height="600" width="500"  frameborder="0" align="left"></iframe>       
+</td>
+<td> <iframe src="<%=request.getContextPath()%>/../Otheraccounts/thirdpartyaccountsdisplayServlet?id=<%=session.getAttribute("privateIdentity")%>"  height="300" width="500"  frameborder="0" align="right"></iframe>       
 
-  
+<iframe src="../../Geolocation/geolocationalone.jsp"  height="300" width="500"  frameborder="0" align="right"></iframe>       
+
+</td>
+</tr>
+</table>
+                  
+			<a href="<%=request.getContextPath()%>/deleteAccountServlet">Delete My account</a>  
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 			<a href="<%=request.getContextPath()%>/../Otheraccounts/thirdpartyaccountsfetchServlet?id=<%=session.getAttribute("privateIdentity")%>"> Link My Account to Other Accounts</a>    
+ 			
+    </section>
+
+
+
  <!---------------------------------------------------------------------------> 
-
-<%@include file="footerservice.jsp" %>
+<div id="footer-wrap">
+ <%-- <%@include file="footer.jsp" %> --%>
+ </div> 

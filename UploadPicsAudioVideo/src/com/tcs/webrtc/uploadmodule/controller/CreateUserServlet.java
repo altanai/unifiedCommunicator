@@ -22,6 +22,8 @@ import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.IOUtils;
 
+import setups.presentation_server;
+
 import com.tcs.webrtc.uploadmodule.Dao.CreateUserDao;
 import com.tcs.webrtc.uploadmodule.bean.UserProfile;
 
@@ -32,11 +34,15 @@ import com.tcs.webrtc.uploadmodule.bean.UserProfile;
 public class CreateUserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+	 String serverip=null;
+	 
     public CreateUserServlet() {
         super();
+        
+        presentation_server ps=new presentation_server();
+    	String rdarr[]=new String[1];
+    	rdarr=ps.read_presentation_server_file();
+    	serverip=rdarr[0];
         // TODO Auto-generated constructor stub
     }
 
@@ -46,6 +52,7 @@ public class CreateUserServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		String action=request.getParameter("action");
+		FileInputStream inputStream=null; 
 		if(action.equalsIgnoreCase("ViewList"))
 		{
 			ArrayList<UserProfile> profiles=null;
@@ -63,23 +70,20 @@ public class CreateUserServlet extends HttpServlet {
 	if(action.equalsIgnoreCase("getUser"))
 		{
 			String userId=request.getParameter("id");
+			String userName=request.getParameter("name");
+			
 			System.out.println("userID...."+userId);
 			UserProfile obj=null;
 			obj=(new CreateUserDao()).getUser(userId);
+			
+			
 			if(obj==null)
 			{
 			
-				/*request.setAttribute("error", "Sorry the requested user could not be fetched");*/
-				/*request.getRequestDispatcher("noProfile.jsp").forward(request, response);*/
-				//response.sendRedirect("profile.jsp");
 				System.out.println(""+obj);
-				String str=userId;
-				str= str.substring(str.lastIndexOf("sip:")+4, str.lastIndexOf("@tcs.com"));
-				System.out.println(" userid : "+ userId +"-----str :"+str);
 				
-				response.sendRedirect("http://localhost:8080/WebRTC_presentation/pageone/noProfile.jsp?displayName="+str+"&privateIdentity="+userId);
-				/*request.getRequestDispatcher("profile.jsp?displayName="+str+"&privateIdentity="+userId).forward(request, response);*/
-
+				response.sendRedirect("http://"+serverip+":8080/WebRTC_presentation/pageone/noProfile.jsp?displayName="+userName+"&privateIdentity="+userId);
+				
 				
 			}
 			else
@@ -94,10 +98,18 @@ public class CreateUserServlet extends HttpServlet {
 			
 			UserProfile person=new CreateUserDao().getUser(request.getParameter("id"));
 			if(person==null)
-			{
-				System.out.println("No Record Found");
+			{ 
+				
+				System.out.println("dfgtoyitryiptrypop[try[wpte[wey");
+				response.setContentType("image/jpeg");
+				File image = new File("/home/altanai/altanaiworkspace3/WebRTC_presentation/WebContent/pageone/images/thumb-pic.png");
+				inputStream = new FileInputStream(image); 
+				byte[] bytes = IOUtils.toByteArray(inputStream);
+				response.getOutputStream().write(bytes);
+				
 				return;
 			}
+		
 			response.setContentType("image/jpeg");
 			response.setContentLength(person.getProfilepic().length);
 			response.getOutputStream().write(person.getProfilepic());
@@ -154,7 +166,6 @@ public class CreateUserServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
-		System.out.println("Uploda audio video proj : Create user servlet : post ");
 		int i=0;
 		FileInputStream inputStream = null;
 		//String action=request.getRequestURI().split("/")[request.getRequestURI().split("/").length-1];
@@ -181,13 +192,12 @@ public class CreateUserServlet extends HttpServlet {
 					if(item.isFormField())
 					{
 						String name=item.getFieldName();
-						System.out.println(" usernbame "+name);
+						
 						String value=item.getString();
-						System.out.println(" value"+value);
+						
 						if(name.equalsIgnoreCase("name"))
 							user.setName(value);
-/*						if(name.equalsIgnoreCase("userid"))
-							user.setId(value);*/
+					
 					}
 					else
 					{
@@ -203,7 +213,7 @@ public class CreateUserServlet extends HttpServlet {
 						{
 							System.out.println("when image is default ");
 							//File image = new File("UploadPicsAudioVideo/images/thumb-pic.png"); 
-							File image = new File("/home/altanai/altanaiworkspace3/UploadPicsAudioVideo/WebContent/images/thumb-pic.png");
+							File image = new File("/home/altanai/altanaiworkspace3/WebRTC_presentation/WebContent/pageone/images/thumb-pic.png");
 							inputStream = new FileInputStream(image); 
 							byte[] bytes = IOUtils.toByteArray(inputStream);
 							user.setProfilepic(bytes);
