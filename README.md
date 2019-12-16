@@ -48,3 +48,51 @@ Technologies used :
 ## Getting started 
 
 -- tbd --
+
+## Release Notes 
+
+- Integration with new age CSP deployments like VoLTE, ViLTE, VoWiFi 
+- Multi vendor support
+- Interactive webrtc services 
+- Media Services 
+    - Automated Natural language Speech recognition
+    - Semantic processing via ML 
+    - Enhanced incall services replacing IVR ( touch -tone) 
+    - VQE (voice Quality Enhancements) 
+    - Encoding and Decoding - Multiple Codec Support
+    - Transcoding
+    - Silence Suppression
+- Security via TLS, encryption and AAA
+- Http, NFS caching 
+- NAT using Xirsys TURN  
+- Recording, playback and media file compression  
+- active frame selection
+- DTMF (Dual Tone Multi Frequency)
+    - SIP info messages (out-of-band)
+    - SIP notify messages (out-of-band)
+    - Inband DTMF not supported yet 
+- Audio 
+    - mixing 
+    - announcements ( VXML, MSML )
+    - filters 
+    - gain control ( AGC using webrtc stack)
+    - noise suppresesion ( webrtc stack)
+    - speakers notification
+    - Narrowband, Wideband, and Super Wideband
+    - dynamic sample rate
+- Video  
+    - continuous presence ( Face detetion ) 
+    - floor control
+    - video lipsync (sync)
+    - speaker tile selection 
+- VQE (Voice Quality Enhancement )
+    - Acoustic Echo Cancelation
+    - noise reduction
+    - noise line detection
+    - noise gating
+    - Packet Loss concealment 
+- Call analyics 
+    - progress analysis   
+    - MOS , R-factor ( derived from latency , jitter , packet loss )
+- CDR (Call detail records ) and accounting 
+- Lawful interception
